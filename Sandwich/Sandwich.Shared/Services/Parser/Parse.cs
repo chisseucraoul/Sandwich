@@ -6,5 +6,6 @@ namespace Sandwich.Services.Parser
 {
     class Parse
     {
+
     }
 }
