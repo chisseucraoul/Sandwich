@@ -6,13 +6,30 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    DataContext="{Binding Source={StaticResource Locator},Path=Main}">
 
     <Grid>
         <Grid.Background>
             <SolidColorBrush Color="#FFF7F7F7"/>
         </Grid.Background>
-        <ListView HorizontalAlignment="Left" Height="491" Margin="15,62,0,0" VerticalAlignment="Top" Width="371" BorderThickness="20"/>
+        <ListView HorizontalAlignment="Left" Height="491" Margin="15,62,0,0" VerticalAlignment="Top" Width="371" BorderThickness="20" ItemsSource="{Binding Drinks,Mode=TwoWay}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal" Width="300" Height="Auto">
+                            <TextBlock Text="Nom : " FontSize="20" Width="100"/>
+                            <TextBlock Text= "{Binding FrenchName}" FontSize="20" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Width="300" Height="Auto">
+                            <TextBlock Text="Prix : " FontSize="20" Width="100"/>
+                            <TextBlock Text= "{Binding Price}" FontSize="20"/>
+                        </StackPanel>
+                        <StackPanel Height="20"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
         <Button x:Name="bt_add" Content="Add" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Foreground="#FF2AA5E1" BorderThickness="0" FontFamily="Arial" FontSize="21.333"/>
         <Button x:Name="bt_del" Content="Delete" HorizontalAlignment="Left" Height="20" Margin="281,0,0,0" VerticalAlignment="Top" Width="73" Foreground="#FF33A4DB" BorderThickness="0" FontFamily="Arial" FontSize="21.333"/>
         <TextBlock HorizontalAlignment="Left" Height="26" Margin="130,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" FontFamily="Arial" FontSize="24" FontWeight="Bold">

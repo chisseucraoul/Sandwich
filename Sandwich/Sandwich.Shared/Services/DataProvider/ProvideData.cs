@@ -8,21 +8,17 @@ using Sandwich.Services.Parser;
 
 namespace Sandwich.Services.DataProvider
 {
-    public class DataProvider
+    public static class ProvideData
     {
 
 
-        public System.Net.HttpWebRequest Request { get; set; }
+        public static System.Net.HttpWebRequest Request { get; set; }
 
-        public ParseObject Parser { get; set; }
-
-        public DataProvider()
-        {
-            Parser = new ParseObject();
-        }
+        public static ParseObject Parser { get; set; }
 
 
-        public async Task<IList<Drinks>> getlstSandwichAsync()
+
+        public static async Task<IList<Drinks>> getlstSandwichAsync()
         {
 
             // Next set up our request URL, headers Content Type.
