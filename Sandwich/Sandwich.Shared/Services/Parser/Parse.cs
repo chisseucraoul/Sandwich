@@ -10,7 +10,6 @@ namespace Sandwich.Services.Parser
 
         public Parse() { }
 
-        //boisson/sandwich/ingredient/commande
 
         public List<Drinks> ParseDrink(string json)
         {
@@ -19,7 +18,7 @@ namespace Sandwich.Services.Parser
             return drink;
         }
 
-        public List<Sandwich> ParseDrink(string json)
+        public List<Sandwich> ParseSandwich(string json)
         {
             List<Sandwich> sandwich = JsonConvert.DeserializeObject<List<Sandwich>>(json);
 
