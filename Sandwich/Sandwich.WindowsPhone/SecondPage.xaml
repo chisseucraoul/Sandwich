@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="Sandwich.SecondPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Sandwich"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="#FFF7F7F7">
+        <TextBlock HorizontalAlignment="Left" Height="29" Margin="139,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="124" FontFamily="Arial" FontSize="24" FontWeight="Bold">
+    		<Run Foreground="#FF140606" Text="      Menu"/>
+        </TextBlock>
+        <ListView HorizontalAlignment="Center" Height="500" Margin="0,82,0,0" VerticalAlignment="Top" Width="400">
+
+            <StackPanel Orientation="Vertical" Width="400" Height="500" ScrollViewer.HorizontalScrollBarVisibility="Visible">
+                <Button x:Name="bt_allsand" Content="All Sandwiches" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FF2AA5E1" FontFamily="Arial" FontSize="21.333" Width="398" Margin="0" Padding="0,20" BorderThickness="0" BorderBrush="Black">
+                    <Button.Background>
+                        <SolidColorBrush Color="#99D0CFCF"/>
+                    </Button.Background>
+                </Button>
+
+                <Button x:Name="bt_drinks" Content="Drinks" VerticalAlignment="Top" Foreground="#FF2AA5E1" BorderThickness="0" FontFamily="Arial" FontSize="21.333" Width="398" Padding="0,20" Margin="0" BorderBrush="Black" HorizontalAlignment="Center" Background="#99D0CFCF"/>
+
+                <Button x:Name="bt_searchIng" Content="Search By Ingredients" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FF2AA5E1" FontFamily="Arial" FontSize="21.333" Width="398" Margin="1,0" Padding="0,20" BorderThickness="0" BorderBrush="Black" Background="#99D0CFCF"/>
+
+                <Button x:Name="bt_prefSand" Content="Favorites Sandwiches" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FF2AA5E1" FontFamily="Arial" FontSize="21.333" Width="398" Margin="1,0" Padding="0,20" BorderThickness="0" BorderBrush="Black" Background="#99D0CFCF"/>
+
+
+            </StackPanel>
+
+        </ListView>
+
+    </Grid>
+</Page>

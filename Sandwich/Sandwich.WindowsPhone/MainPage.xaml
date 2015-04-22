@@ -9,6 +9,20 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="#FFF7F7F7"/>
+        </Grid.Background>
+        <ListView HorizontalAlignment="Left" Height="491" Margin="15,62,0,0" VerticalAlignment="Top" Width="371" BorderThickness="20"/>
+        <Button x:Name="bt_add" Content="Add" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Foreground="#FF2AA5E1" BorderThickness="0" FontFamily="Arial" FontSize="21.333"/>
+        <Button x:Name="bt_del" Content="Delete" HorizontalAlignment="Left" Height="20" Margin="281,0,0,0" VerticalAlignment="Top" Width="73" Foreground="#FF33A4DB" BorderThickness="0" FontFamily="Arial" FontSize="21.333"/>
+        <TextBlock HorizontalAlignment="Left" Height="26" Margin="130,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" FontFamily="Arial" FontSize="24" FontWeight="Bold">
+    		<Run Text="  "/>
+    		<Run Foreground="#FF140606" Text="iSandwich"/>
+        </TextBlock>
+        <Border BorderThickness="1" HorizontalAlignment="Left" Height="71" Margin="10,559,0,0" VerticalAlignment="Top" Width="380" CornerRadius="16" Background="#FF2BB13D" BorderBrush="Black">
+            <Button Content="Command" HorizontalAlignment="Stretch" Margin="-0.833,5.167,-0.833,-4" VerticalAlignment="Stretch" BorderBrush="Transparent" BorderThickness="0" FontFamily="Arial" FontSize="21.333"/>
+        </Border>
+
 
     </Grid>
 </Page>
