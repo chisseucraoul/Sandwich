@@ -8,7 +8,7 @@ namespace Sandwich
     {
         public override string ToString()
         {
-            return base.NameFood;
+            return base.FrenchName;
         }
     }
 }

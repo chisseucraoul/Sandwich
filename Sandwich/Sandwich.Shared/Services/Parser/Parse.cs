@@ -5,9 +5,9 @@ using Newtonsoft.Json;
 
 namespace Sandwich.Services.Parser
 {
-    class Parse
+    public class Parse
     {
-        //boisson/sandwich/ingredient/commande
+        ///ingredient/commande
 
         public List<Drinks> ParseDrink(string json)
         {
@@ -15,6 +15,22 @@ namespace Sandwich.Services.Parser
 
             return drink;
         }
+
+        public List<Sandwich> ParseDrink(string json)
+        {
+            List<Sandwich> sandwich = JsonConvert.DeserializeObject<List<Sandwich>>(json);
+
+            return sandwich;
+        }
+
+        public List<Ingredient> ParseIngredient(string json)
+        {
+            List<Ingredient> ingredient = JsonConvert.DeserializeObject<List<Ingredient>>(json);
+
+            return ingredient;
+        }
+
+
 
 
 
