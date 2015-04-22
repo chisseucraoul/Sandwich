@@ -19,9 +19,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Drinks.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Foods.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Sandwich.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Services\DataProvider\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Services\Parser\" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\DataProvider\DataProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Parser\Parse.cs" />
   </ItemGroup>
 </Project>
