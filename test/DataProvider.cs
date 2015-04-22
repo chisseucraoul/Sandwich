@@ -10,11 +10,14 @@ namespace Sandwich.Services.DataProvider
 {
     public class DataProvider
     {
+        static void Main(string[] args)
+        {
+            get
+        }
 
+        public System.Net.HttpWebRequest Request {get; set;}
 
-        public System.Net.HttpWebRequest Request { get; set; }
-
-        public ParseObject Parser { get; set; }
+        public ParseObject Parser{get;set;}
 
         public DataProvider()
         {
@@ -22,7 +25,7 @@ namespace Sandwich.Services.DataProvider
         }
 
 
-        public async Task<IList<Drinks>> getlstSandwichAsync()
+        public async Task<IList<Drinks>> getLstSandwichAsync()
         {
 
             // Next set up our request URL, headers Content Type.
@@ -42,14 +45,11 @@ namespace Sandwich.Services.DataProvider
                 resultJson = streamReader.ReadToEnd();
             }
 
-
+          
             return Parser.ParseDrink(resultJson);
-
-
+      
+            
         }
-
-
-
 
 
 

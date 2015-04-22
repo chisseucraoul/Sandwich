@@ -1,14 +1,15 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
-using Newtonsoft.Json;
+
 
 namespace Sandwich.Services.Parser
 {
-    public class Parse
+    public class ParseObject
     {
 
-        public Parse() { }
+        public ParseObject() { }
 
 
         public List<Drinks> ParseDrink(string json)

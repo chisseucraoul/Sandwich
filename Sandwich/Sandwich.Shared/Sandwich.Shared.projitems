@@ -21,6 +21,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Ingredient.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Sandwich.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\DataProvider\DataProvider.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\Parser\Parse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Parser\ParseObject.cs" />
   </ItemGroup>
 </Project>
