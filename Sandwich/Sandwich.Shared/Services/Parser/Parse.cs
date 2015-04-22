@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+using Newtonsoft.Json;
 
 namespace Sandwich.Services.Parser
 {
@@ -9,7 +9,12 @@ namespace Sandwich.Services.Parser
     {
         //boisson/sandwich/ingredient/commande
 
+        public List<Drinks> ParseDrink(string json)
+        {
+            List<Drinks> drink = JsonConvert.DeserializeObject<List<Drinks>>(json);
 
+            return drink;
+        }
 
 
 
