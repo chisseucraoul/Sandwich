@@ -1,13 +1,16 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
-using Newtonsoft.Json;
+
 
 namespace Sandwich.Services.Parser
 {
-    public class Parse
+    public class ParseObject
     {
-        ///ingredient/commande
+
+        public ParseObject() { }
+
 
         public List<Drinks> ParseDrink(string json)
         {
@@ -16,7 +19,7 @@ namespace Sandwich.Services.Parser
             return drink;
         }
 
-        public List<Sandwich> ParseDrink(string json)
+        public List<Sandwich> ParseSandwich(string json)
         {
             List<Sandwich> sandwich = JsonConvert.DeserializeObject<List<Sandwich>>(json);
 
