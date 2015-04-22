@@ -6,11 +6,13 @@ namespace Sandwich
 {
     public sealed class Caddy
     {
+
+
         private static readonly Caddy instance = new Caddy();
 
         private Caddy()
         {
-            foodQtydictionary = new Dictionary<Foods, int>();
+            FoodQtyDictionary = new Dictionary<Foods, int>();
         }
 
         public static Caddy Instance
@@ -21,48 +23,35 @@ namespace Sandwich
             }
         }
 
-        private Dictionary<Foods, int> foodQtydictionary;
-
-        public Dictionary<Foods, int> FoodQtydictionary
-        {
-            get { return foodQtydictionary; }
-            set { foodQtydictionary = value; }
-        }
-        //ceci est u comm
+        public Dictionary<Foods, int> FoodQtyDictionary { get; set; }
+        
+        
         public void CleanCaddy()
         {
-            FoodQtydictionary.Clear();
+            FoodQtyDictionary.Clear();
         }
 
         public void addCaddy(Foods newFood, int qty)
         {
 
-            if (this.FoodQtydictionary.ContainsKey(newFood))
+            if (this.FoodQtyDictionary.ContainsKey(newFood))
             {
-                int oldval = this.FoodQtydictionary[newFood];
+                int oldval = this.FoodQtyDictionary[newFood];
 
-                this.FoodQtydictionary.Remove(newFood);
-                this.FoodQtydictionary.Add(newFood, oldval + qty);
-
-
+                this.FoodQtyDictionary.Remove(newFood);
+                this.FoodQtyDictionary.Add(newFood, oldval + qty);
             }
             else
             {
-
-                FoodQtydictionary.Add(newFood, qty);
-
-
+                FoodQtyDictionary.Add(newFood, qty);
             }
-
-
-
 
         }
         public void deleteFoodCaddy(Foods deletedFood)
         {
-            if (this.FoodQtydictionary.Count != 0)
+            if (this.FoodQtyDictionary.Count != 0)
             {
-                if (this.FoodQtydictionary.ContainsKey(deletedFood))
+                if (this.FoodQtyDictionary.ContainsKey(deletedFood))
                 {
 
                 }

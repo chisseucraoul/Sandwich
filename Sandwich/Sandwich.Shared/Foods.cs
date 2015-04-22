@@ -8,24 +8,9 @@ namespace Sandwich
     {
         public String FoodID { get; set; }
         public String NameFood { get; set; }
-
         public float PriceFood { get; set; }
-       
-
-        private string descriptionFood;
-
-        public string DescriptionFood
-        {
-            get { return descriptionFood; }
-            set { descriptionFood = value; }
-        }
-
-        private string imageUrlFood;
-
-        public string ImageUrlFood
-        {
-            get { return imageUrlFood; }
-            set { imageUrlFood = value; }
-        }
+        public String DescriptionFood { get; set; }
+        public String ImageUrlFood { get; set; }
+      
     }
 }
