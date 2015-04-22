@@ -5,8 +5,11 @@ using Newtonsoft.Json;
 
 namespace Sandwich.Services.Parser
 {
-    class Parse
+    public class Parse
     {
+
+        public Parse() { }
+
         //boisson/sandwich/ingredient/commande
 
         public List<Drinks> ParseDrink(string json)
