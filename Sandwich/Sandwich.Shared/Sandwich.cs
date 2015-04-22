@@ -13,7 +13,7 @@ namespace Sandwich
 
         public override string ToString()
         {
-            return base.NameFood + "; Crudité : " + Crudite + "Type de pain : " + Bread;
+            return base.FrenchName + "; Crudité : " + Crudite + "Type de pain : " + Bread;
         }
     }
 }

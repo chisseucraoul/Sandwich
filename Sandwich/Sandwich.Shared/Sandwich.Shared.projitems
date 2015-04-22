@@ -18,6 +18,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Caddy.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Drinks.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Foods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Ingredient.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Sandwich.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\DataProvider\DataProvider.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Parser\Parse.cs" />

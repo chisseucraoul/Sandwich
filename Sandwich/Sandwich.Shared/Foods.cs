@@ -6,11 +6,10 @@ namespace Sandwich
 {
     public class Foods
     {
-        public String FoodID { get; set; }
-        public String NameFood { get; set; }
-        public float PriceFood { get; set; }
-        public String DescriptionFood { get; set; }
-        public String ImageUrlFood { get; set; }
+        public String ObjectId { get; set; }
+        public String FrenchName { get; set; }
+        public float Price { get; set; }
+        public String Image { get; set; }
       
     }
 }
