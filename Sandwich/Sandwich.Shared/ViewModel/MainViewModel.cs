@@ -1,4 +1,9 @@
 using GalaSoft.MvvmLight;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using Sandwich.Services.DataProvider;
+using Sandwich.Services.Parser;
+using Sandwich.ViewModel;
 
 namespace Sandwich.ViewModel
 {
@@ -14,13 +19,18 @@ namespace Sandwich.ViewModel
     /// See http://www.galasoft.ch/mvvm
     /// </para>
     /// </summary>
-    public class MainViewModel : ViewModelBase
+    public class MainViewModel : ViewModelBase, INotifyPropertyChanged
     {
+        private ObservableCollection<Drinks> _drinks;
+        public ObservableCollection<Drinks> Drinks { get { return _drinks; } set { _drinks = value; RaisePropertyChanged("Drinks"); } }
+
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
         /// </summary>
         public MainViewModel()
         {
+            Drinks = new ObservableCollection<Drinks>(ProvideData.getlstSandwichAsync().Result);
+
             ////if (IsInDesignMode)
             ////{
             ////    // Code runs in Blend --> create design time data.
