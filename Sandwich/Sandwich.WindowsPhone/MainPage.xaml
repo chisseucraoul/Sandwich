@@ -13,7 +13,7 @@
         <Grid.Background>
             <SolidColorBrush Color="#FFF7F7F7"/>
         </Grid.Background>
-        <ListView HorizontalAlignment="Left" Height="491" Margin="15,62,0,0" VerticalAlignment="Top" Width="371" BorderThickness="20" ItemsSource="{Binding Drinks,Mode=TwoWay}">
+        <ListView HorizontalAlignment="Left" Height="491" Margin="15,62,0,0" VerticalAlignment="Top" Width="371" BorderThickness="20" ItemsSource="{Binding Drinks,Mode=TwoWay}" Foreground="Black">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Vertical">
