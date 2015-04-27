@@ -13,10 +13,14 @@
         <Grid.Background>
             <SolidColorBrush Color="#FFF7F7F7"/>
         </Grid.Background>
-        <ListView HorizontalAlignment="Left" Height="491" Margin="15,62,0,0" VerticalAlignment="Top" Width="371" BorderThickness="20" ItemsSource="{Binding Drinks,Mode=TwoWay}" Foreground="Black">
+        <ListView HorizontalAlignment="Left" Height="491" Margin="12,64,0,0" VerticalAlignment="Top" Width="371" BorderThickness="20" ItemsSource="{Binding Drinks,Mode=TwoWay}" Foreground="Black">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal" Width="300" Height="Auto">
+                            <TextBlock Text="ID : " FontSize="20" Width="100"/>
+                            <TextBlock Text= "{Binding ObjectId}" FontSize="20" />
+                        </StackPanel>
                         <StackPanel Orientation="Horizontal" Width="300" Height="Auto">
                             <TextBlock Text="Nom : " FontSize="20" Width="100"/>
                             <TextBlock Text= "{Binding FrenchName}" FontSize="20" />
@@ -25,6 +29,11 @@
                             <TextBlock Text="Prix : " FontSize="20" Width="100"/>
                             <TextBlock Text= "{Binding Price}" FontSize="20"/>
                         </StackPanel>
+                        <StackPanel Orientation="Horizontal" Width="300" Height="Auto">
+                            <TextBlock Text="url : " FontSize="20" Width="100"/>
+                            <TextBlock Text= "{Binding Image}" FontSize="20" />
+                        </StackPanel>
+                        <Image Source="{Binding Image}"/>
                         <StackPanel Height="20"/>
                     </StackPanel>
                 </DataTemplate>
@@ -36,9 +45,7 @@
     		<Run Text="  "/>
     		<Run Foreground="#FF140606" Text="iSandwich"/>
         </TextBlock>
-        <Border BorderThickness="1" HorizontalAlignment="Left" Height="71" Margin="10,559,0,0" VerticalAlignment="Top" Width="380" CornerRadius="16" Background="#FF2BB13D" BorderBrush="Black">
-            <Button Content="Command" HorizontalAlignment="Stretch" Margin="-0.833,5.167,-0.833,-4" VerticalAlignment="Stretch" BorderBrush="Transparent" BorderThickness="0" FontFamily="Arial" FontSize="21.333"/>
-        </Border>
+        <Button x:Name="bt_com" Content="Command" HorizontalAlignment="Left" Height="84" Margin="20,555,0,0" VerticalAlignment="Top" Width="361" Background="#FF2BB13D" BorderThickness="0" FontFamily="Arial" FontSize="21.333" BorderBrush="Black"/>
 
 
     </Grid>

@@ -21,7 +21,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)DataModel\Ingredient.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DataModel\Sandwich.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\DataProvider\ProvideData.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\Parser\ParseObject.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\MainViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\ViewModelLocator.cs" />
   </ItemGroup>

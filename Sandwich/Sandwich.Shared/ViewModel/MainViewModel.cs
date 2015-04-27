@@ -6,6 +6,7 @@ using Sandwich.Services.Parser;
 using Sandwich.ViewModel;
 using System.Threading.Tasks;
 using System;
+using Sandwich.DataModel;
 
 namespace Sandwich.ViewModel
 {
