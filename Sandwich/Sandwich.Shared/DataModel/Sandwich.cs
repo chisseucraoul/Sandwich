@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sandwich
+namespace Sandwich.DataModel
 {
     public class Sandwich : Foods
     {
