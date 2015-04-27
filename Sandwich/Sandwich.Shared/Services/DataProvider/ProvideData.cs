@@ -4,7 +4,6 @@ using System.Text;
 using System.Collections;
 using System.Threading.Tasks;
 using System.IO;
-using Sandwich.Services.Parser;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
 using System.Net.Http;
@@ -52,7 +51,7 @@ namespace Sandwich.Services.DataProvider
                 {
                     try
                     {
-                        Drinks searchResult = (Drinks) new Foods
+                        Drinks searchResult =  new Drinks
                         {
                             FrenchName = result["FrenchName"].ToString(),
                             Image = result["Image"]["url"].ToString(),
@@ -96,7 +95,7 @@ namespace Sandwich.Services.DataProvider
                 {
                     try
                     {
-                        Sandwich.DataModel.Sandwich searchResult = (Sandwich.DataModel.Sandwich) new Foods
+                        Sandwich.DataModel.Sandwich searchResult = new Sandwich.DataModel.Sandwich
 
                         
                         {
@@ -126,7 +125,7 @@ namespace Sandwich.Services.DataProvider
                 return lstSandwichs;
             }
          
-        public async Task<IList<Ingredient>> getlstSandwichAsync()
+        public async Task<IList<Ingredient>> getlstIngredientAsync()
         {
            
 

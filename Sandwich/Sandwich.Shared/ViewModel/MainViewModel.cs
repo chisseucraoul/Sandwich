@@ -2,7 +2,6 @@ using GalaSoft.MvvmLight;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using Sandwich.Services.DataProvider;
-using Sandwich.Services.Parser;
 using Sandwich.ViewModel;
 using System.Threading.Tasks;
 using System;
@@ -49,7 +48,7 @@ namespace Sandwich.ViewModel
         public async Task InitialiseAsync()
         {
             var service = new ProvideData();
-            var lstDrinks = await service.getlstDrinksAsync();
+            var lstDrinks = await service.getlstSandwichAsync();
 
             Drinks = new ObservableCollection<Foods>(lstDrinks);
             
