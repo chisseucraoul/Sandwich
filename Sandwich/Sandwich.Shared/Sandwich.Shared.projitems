@@ -15,13 +15,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Caddy.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Drinks.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Foods.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Ingredient.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Sandwich.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataModel\Caddy.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataModel\Drinks.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataModel\Foods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataModel\Ingredient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataModel\Sandwich.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\DataProvider\ProvideData.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\Parser\ParseObject.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\MainViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\ViewModelLocator.cs" />
   </ItemGroup>

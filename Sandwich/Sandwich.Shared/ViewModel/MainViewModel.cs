@@ -2,8 +2,10 @@ using GalaSoft.MvvmLight;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using Sandwich.Services.DataProvider;
-using Sandwich.Services.Parser;
 using Sandwich.ViewModel;
+using System.Threading.Tasks;
+using System;
+using Sandwich.DataModel;
 
 namespace Sandwich.ViewModel
 {
@@ -21,24 +23,36 @@ namespace Sandwich.ViewModel
     /// </summary>
     public class MainViewModel : ViewModelBase, INotifyPropertyChanged
     {
-        private ObservableCollection<Drinks> _drinks;
-        public ObservableCollection<Drinks> Drinks { get { return _drinks; } set { _drinks = value; RaisePropertyChanged("Drinks"); } }
+        private ObservableCollection<Foods> _drinks = null;
+        public ObservableCollection<Foods> Drinks { get { return _drinks; } set { _drinks = value; RaisePropertyChanged("Drinks"); } }
 
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
         /// </summary>
         public MainViewModel()
         {
-            Drinks = new ObservableCollection<Drinks>(ProvideData.getlstSandwichAsync().Result);
-
-            ////if (IsInDesignMode)
-            ////{
+            
+            if (IsInDesignMode)
+                {
             ////    // Code runs in Blend --> create design time data.
-            ////}
-            ////else
-            ////{
+                }
+            else
+            {
             ////    // Code runs "for real"
-            ////}
+
+            InitialiseAsync();
+
+            }
+        }
+
+        public async Task InitialiseAsync()
+        {
+            var service = new ProvideData();
+            var lstDrinks = await service.getlstSandwichAsync();
+
+            Drinks = new ObservableCollection<Foods>(lstDrinks);
+            
+
         }
     }
 }
