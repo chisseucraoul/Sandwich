@@ -6,6 +6,9 @@ using Sandwich.ViewModel;
 using System.Threading.Tasks;
 using System;
 using Sandwich.DataModel;
+using GalaSoft.MvvmLight.Ioc;
+using GalaSoft.MvvmLight.Views;
+using Windows.UI.Xaml;
 
 namespace Sandwich.ViewModel
 {
@@ -31,7 +34,6 @@ namespace Sandwich.ViewModel
         /// </summary>
         public MainViewModel()
         {
-            
             if (IsInDesignMode)
                 {
             ////    // Code runs in Blend --> create design time data.
@@ -39,11 +41,20 @@ namespace Sandwich.ViewModel
             else
             {
             ////    // Code runs "for real"
-
-            InitialiseAsync();
-
+           // InitialiseAsync();
             }
         }
+
+        private INavigationService _navigationService;
+
+        [PreferredConstructor]
+        public MainViewModel(INavigationService navigationService) 
+        { 
+            _navigationService = navigationService;
+                     
+        }
+
+        
 
         public async Task InitialiseAsync()
         {
