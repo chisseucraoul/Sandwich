@@ -20,9 +20,9 @@ namespace Sandwich
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class SecondPage : Page
+    public sealed partial class DisplayElements : Page
     {
-        public SecondPage()
+        public DisplayElements()
         {
             this.InitializeComponent();
         }
@@ -34,17 +34,6 @@ namespace Sandwich
         /// This parameter is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            Windows.Phone.UI.Input.HardwareButtons.BackPressed -= HardwareButtons_BackPressed;
         }
-
-        private async void HardwareButtons_BackPressed(object sender, Windows.Phone.UI.Input.BackPressedEventArgs e)
-        {
-            e.Handled = true;
-            if (this.Frame.CanGoBack)
-                this.Frame.GoBack();
-                
-            
-        }
-
     }
 }
