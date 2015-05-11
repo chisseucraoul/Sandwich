@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource AppBarItemForegroundThemeBrush}">
 
     <Grid x:Name="LayoutRoot">
 
@@ -20,18 +20,18 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Text="Nom du Sandwich" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Grid.Row="0" Text="Nom du Sandwich" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black" FontFamily="Arial" FontWeight="Bold"/>
         <Image Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <CheckBox Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" FlowDirection="RightToLeft">
-            <TextBlock FlowDirection="LeftToRight" Text="Favori:" />
+        <CheckBox Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" FlowDirection="RightToLeft" Background="#FFD7DAD7">
+            <TextBlock FlowDirection="LeftToRight" Text="Favori:" Foreground="Black" FontWeight="Bold" />
         </CheckBox>
-        <ComboBox x:Name="comboBox1" SelectionChanged="ComboBox_SelectionChanged" Width="300" Grid.Row="4">
+        <ComboBox x:Name="comboBox1" SelectionChanged="ComboBox_SelectionChanged" Width="300"  FontFamily="Arial" Grid.Row="4" Background="#FFD7DAD7">
             <x:String>Pain blanc</x:String>
             <x:String>Pain gris</x:String>
             <x:String>Pain complet</x:String>
         </ComboBox>
-        <CheckBox Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" FlowDirection="RightToLeft">
-            <TextBlock FlowDirection="LeftToRight" Text="Crudité:" />
+        <CheckBox Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" FlowDirection="RightToLeft" Foreground="#FF7E7676" Background="#FFD7DAD7">
+            <TextBlock FlowDirection="LeftToRight" Text="Crudité:" Foreground="Black" FontFamily="Arial" FontWeight="Bold" />
         </CheckBox>
       
             <Grid Grid.Row="6">
@@ -40,11 +40,12 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button Content="+" HorizontalAlignment="Right" Margin="0,16,0,18" Grid.Column="0"/>
-                <TextBlock Text="ajouter ou supprimer" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1"/>
-                <Button Content="-" HorizontalAlignment="Left" Grid.Column="2"/>
+                <Button Content="+" HorizontalAlignment="Right" Margin="0,16,0,18" Grid.Column="0" Background="#FF2BB13D" BorderThickness="0"/>
+                <TextBlock Text="ajouter ou supprimer" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Foreground="Black" FontFamily="Arial" FontWeight="Bold"/>
+                <Button Content="-" HorizontalAlignment="Left" Grid.Column="2" Background="#FFB12B2B" BorderThickness="0"/>
             </Grid>
-            <Button Content="ajoute à la commande" Grid.Row="7" HorizontalAlignment="Center" />
+            <Button Content="ajoute à la commande" Grid.Row="7" HorizontalAlignment="Center" Background="#FF2BB13D" Margin="50,12,50,11" Width="300" BorderThickness="0" />
+            <Path Data="M170,144.583" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="0" Margin="170,64.583,0,0" Grid.Row="1" Stretch="Fill" Stroke="Black" UseLayoutRounding="False" VerticalAlignment="Top" Width="0"/>
 
         
     </Grid>

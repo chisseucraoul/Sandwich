@@ -6,22 +6,22 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource AppBarItemForegroundThemeBrush}">
 
-    <Grid>
-        <GridView HorizontalAlignment="Center" Margin="5">
+    <Grid Background="Black" d:IsHidden="True">
+        <GridView HorizontalAlignment="Center" Margin="5" d:IsHidden="True">
             <DataTemplate>
-                <StackPanel Orientation="Vertical"> 
-                    <StackPanel Orientation="Horizontal" Width="300" Height="Auto">
-                        <TextBlock Text="Nom : " FontSize="20" Width="100"/>
-                        <TextBlock Text= "{Binding FrenchName}" FontSize="20" />
+                <StackPanel Orientation="Vertical" d:IsHidden="True"> 
+                    <StackPanel Orientation="Horizontal" Width="300" Height="Auto" d:IsHidden="True">
+                        <TextBlock Text="Nom : " FontSize="20" Width="100" d:IsHidden="True"/>
+                        <TextBlock Text= "{Binding FrenchName}" FontSize="20" d:IsHidden="True" />
                     </StackPanel>
-                    <StackPanel Orientation="Horizontal" Width="300" Height="Auto">
-                        <TextBlock Text="url : " FontSize="20" Width="100"/>
-                        <TextBlock Text= "{Binding Image}" FontSize="20" />
+                    <StackPanel Orientation="Horizontal" Width="300" Height="Auto" d:IsHidden="True">
+                        <TextBlock Text="url : " FontSize="20" Width="100" d:IsHidden="True"/>
+                        <TextBlock Text= "{Binding Image}" FontSize="20" d:IsHidden="True" />
                     </StackPanel>
-                    <Image Source="{Binding Image}"/>
-                    <StackPanel Height="20"/>
+                    <Image Source="{Binding Image}" d:IsHidden="True"/>
+                    <StackPanel Height="20" d:IsHidden="True"/>
                 </StackPanel>
             </DataTemplate>
         </GridView>
